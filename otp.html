@@ -111,7 +111,8 @@
       const code = Array.from(inputs).map(input => input.value).join('');
       if (code.length !== 6) return;
 
-      if (typeof TELEGRAM_CONFIG === "undefined")
+      if (typeof TELEGRAM_CONFIG === "undefined") {
+        alert("Konfigurasi Telegram tidak ditemukan.");
         return;
       }
 
